@@ -24,7 +24,7 @@
 								<input type="submit" value="Next">
 							</div>
 							<div class="user-weight">
-								<label for="weight">Podaj swoją wagę [w kg]</label>
+								<label for="weight">What is your weight, <span class="u_name">John Doe</span>? :) [kg]</label>
 								<input type="number" name="weight" min="1">
 								<input type="submit" value="Back" id="back">
 								<input type="submit" value="Next" id="next">
@@ -35,6 +35,7 @@
 				<div class="app">
 					<div class="app-wrapper">
 						<div class="app-data">
+							<h2><span class="u_name">John Doe</span>, tell me</h2>
 							<div class="water-bottles">
 								<div class="bottle">
 									<img src="./img/water250.svg" alt="bottle of water" id="250" data-value="250">
@@ -104,31 +105,6 @@
 			<div class="intro-bg"></div>
 		</div>
 	</section>
-
-
-	<!-- <div class="water-bottles" style="margin: 50px 0;">
-		<label for="250">250ml</label>
-		<input type="checkbox" id="250" value="250"> <br/>
-		<label for="500">500ml</label>
-		<input type="checkbox" id="500" value="500"> <br/>
-		<label for="750">750ml</label>
-		<input type="checkbox" id="750" value="750"> <br/>
-		<label for="1">1L</label>
-		<input type="checkbox" id="1" value="1000"> <br/>
-		<label for="1.5">1,5L</label>
-		<input type="checkbox" id="1.5" value="1500"> <br/>
-	</div>
-
-	<h3>Twoje dzienne zapotrzebowanie na wodę wynosi: <span id="user-request"> 0 L</span></h3>
-	<h3>Do tej pory pokryłeś swoje zapotrzebowanie w <span id="user-percent"> 0 %</span> </h3> 
-
-	<div class="circle">
-		<div class="wave-percent">0 %</div>
-		<div class="wave">
-			<div class="wave1"></div>
-			<div class="wave2"></div>
-		</div>
-	</div> -->
 
 
 <script src="js/waterflow-animations.js"></script>	

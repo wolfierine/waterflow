@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	//transition: flex .6s cubic-bezier(0.6, -0.28, 0.74, 0.05)
+	overflow: hidden;
 }
 .left:hover{
 	flex: 6;
@@ -72,19 +72,6 @@ body::-webkit-scrollbar-thumb {
 .left.expand + .right{
 	width: 0;
 	flex: unset;
-}
-.left.expand .signin-wrapper{
-	display: none;
-}
-.left.expand .app{
-	display: block;
-	opacity: 1;
-	transition: opacity .6s 2s;
-}
-.app{
-	display: none;
-	opacity: 0;
-	transition: opacity .6s 2s;
 }
 .main{
 	display: flex;
@@ -95,8 +82,29 @@ body::-webkit-scrollbar-thumb {
 }
 .signin-wrapper{
 	width: 80%;
-	transition: all .3s;
-	transition: height .3s, width .3s 1s;
+	transition: opacity .5s, width .4s .3s;
+	opacity: 1;
+}
+.left.expand .signin-wrapper{
+	display: block;
+	height: 0;
+	opacity: 0;
+	width: 0;
+	transition: opacity .5s, width .4s .3s;
+}
+.app{
+	width: 0%;
+	height: 0;
+	opacity: 0;
+	display: block;
+	transition: opacity .6s .5s;
+}
+.left.expand .app{
+	display: block;
+	opacity: 1;
+	height: 100vh;
+	width: 100%;
+	transition: opacity .6s .5s;
 }
 .spacer{
 	flex: 1;
@@ -439,25 +447,5 @@ select:-webkit-autofill:focus {
 	.circle{
 		width: 250px;
 		height: 250px;
-	}
-	.left.expand .signin-wrapper{
-		display: block;
-		height: 0;
-		width: 0;
-		transition: all .4s; 
-	}
-	.app{
-		width: 0%;
-		height: 0;
-		opacity: 0;
-		display: block;
-		transition: opacity .6s .3s;
-	}
-	.left.expand .app{
-		display: block;
-		opacity: 1;
-		height: 100vh;
-		width: 100%;
-		transition: opacity .6s .3s;
 	}
 }
