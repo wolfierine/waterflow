@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Waterflow</title>
+	<link rel="stylesheet" href="css/waterflow.css">
+</head>
+<body>
+
+	<section class="introduction">
+		<div class="left">
+			<div class="spacer"></div>
+			<div class="main">
+				<div class="logo">
+					<img src="./img/drop-of-water.svg" alt="LOGO">
+					Waterflow
+				</div>
+				<div class="signin-wrapper">
+					<form action="" id="signInForm" method="get">
+						<div class="inputs-group">
+							<div class="user-name">
+								<label for="name">Hello! What is your name?</label>
+								<input type="text" name="user_name" id="name">
+								<input type="submit" value="Next">
+							</div>
+							<div class="user-weight">
+								<label for="weight">Podaj swoją wagę [w kg]</label>
+								<input type="number" name="weight" min="1">
+								<input type="submit" value="Back" id="back">
+								<input type="submit" value="Next" id="next">
+							</div>
+						</div>
+					</form>
+				</div>		
+				<div class="app">
+					<div class="app-wrapper">
+						<div class="app-data">
+							<div class="water-bottles">
+								<div class="bottle">
+									<img src="./img/water250.svg" alt="bottle of water" id="250" data-value="250">
+									<span class="bottle-measure">200ml</span>
+									<div class="add-bottle-buttons">
+										<button type="button" id="remove-bottle">-</button>
+										<button type='button' id="add-bottle">+</button>
+									</div>
+								</div>
+								<div class="bottle">
+									<img src="./img/water500.svg" alt="bottle of water" id="500" data-value="500">
+									<span class="bottle-measure">500ml</span>
+									<div class="add-bottle-buttons">
+										<button type="button" id="remove-bottle">-</button>
+										<button type='button' id="add-bottle">+</button>
+									</div>
+								</div>
+								<div class="bottle">
+									<img src="./img/water750.svg" alt="bottle of water" id="750" data-value="750">
+									<span class="bottle-measure">750ml</span>
+									<div class="add-bottle-buttons">
+										<button type="button" id="remove-bottle">-</button>
+										<button type='button' id="add-bottle">+</button>
+									</div>
+								</div>
+								<div class="bottle">
+									<img src="./img/water1.svg" alt="bottle of water" id="1" data-value="1000">
+									<span class="bottle-measure">1L</span>
+									<div class="add-bottle-buttons">
+										<button type="button" id="remove-bottle">-</button>
+										<button type='button' id="add-bottle">+</button>
+									</div>
+								</div>
+								<div class="bottle">
+									<img src="./img/water1.5.svg" alt="bottle of water" id="1.5" data-value="1500">
+									<span class="bottle-measure">1.5L</span>
+									<div class="add-bottle-buttons">
+										<button type="button" id="remove-bottle">-</button>
+										<button type='button' id="add-bottle">+</button>
+									</div>
+								</div>
+							</div>
+							<div class="app-msg">
+								<p>Your daily water requirement is : <span id="user-request"> 0 </span></p>
+								<p>So far you have filled your requirement in : <span id="user-percent"> 0 </span></p> 	
+							</div>
+						</div>
+						<div class="app-anim">
+							<div class="circle">
+								<div class="wave-percent">0 %</div>
+								<div class="wave">
+									<div class="wave1"></div>
+									<div class="wave2"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div id="footer">
+				<p>Copyrights &copy; 2018 All rights reserved.</p>
+				<p>Made by <a href="#" class="orange-text">Sylwia Skowron</a></p>
+			</div>
+		</div>
+		<div class="right">
+			<div class="intro-bg"></div>
+		</div>
+	</section>
+
+
+	<!-- <div class="water-bottles" style="margin: 50px 0;">
+		<label for="250">250ml</label>
+		<input type="checkbox" id="250" value="250"> <br/>
+		<label for="500">500ml</label>
+		<input type="checkbox" id="500" value="500"> <br/>
+		<label for="750">750ml</label>
+		<input type="checkbox" id="750" value="750"> <br/>
+		<label for="1">1L</label>
+		<input type="checkbox" id="1" value="1000"> <br/>
+		<label for="1.5">1,5L</label>
+		<input type="checkbox" id="1.5" value="1500"> <br/>
+	</div>
+
+	<h3>Twoje dzienne zapotrzebowanie na wodę wynosi: <span id="user-request"> 0 L</span></h3>
+	<h3>Do tej pory pokryłeś swoje zapotrzebowanie w <span id="user-percent"> 0 %</span> </h3> 
+
+	<div class="circle">
+		<div class="wave-percent">0 %</div>
+		<div class="wave">
+			<div class="wave1"></div>
+			<div class="wave2"></div>
+		</div>
+	</div> -->
+
+
+<script src="js/waterflow-animations.js"></script>	
+<script src="js/waterflow.js"></script>	
+</body>
+</html>
