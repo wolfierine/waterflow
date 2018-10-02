@@ -6,14 +6,16 @@ const user_input_back = document.querySelector(".inputs-group #back");
 const inputs = document.querySelector(".inputs-group");
 const user_name = document.querySelectorAll(".u_name");
 
-// function setName(name){
-// 	const name_user = name;
-// 	user_name.forEach( name => {
-// 		name.innerHTML = name_user;
-// 	});
-// 	return namee;
-// }
-	
+
+function setName(name){
+	const name_user = name;
+	user_name.forEach( name => {
+		name.innerHTML = name_user;
+		console.log(name);
+	});
+	return name_user;
+}
+
 function nextStepEnterName(e){
 	const key = e.which || e.keyCode;
 	if(this.value == '' && key === 13){
@@ -22,9 +24,15 @@ function nextStepEnterName(e){
 	} 
 	else if(this.value !== '' && key === 13){
 		e.preventDefault();
-		//setName(this.value);
+		setName(this.value);
 		nextStep();
 	}
+}
+
+function nextStepButtonName(e){
+	user_input_name.value ? nextStep() : false;
+	setName(user_input_name.value);
+	e.preventDefault();
 }
 
 function nextStepEnterWeight(e){
@@ -38,6 +46,7 @@ function nextStepEnterWeight(e){
 		showApp(user_input_weight);
 	}
 }
+
 function nextStepButtonWeight(e){
 	user_input_weight.value ? showApp(user_input_weight) : false;
 	e.preventDefault();
@@ -48,12 +57,6 @@ function showApp(weight){
 	const u_weight = weight.value;
 	handleWeight(u_weight);
 	return u_weight;
-}
-
-function nextStepButtonName(e){
-	user_input_name.value ? nextStep() : false;
-	//setName(user_input_name.value);
-	e.preventDefault();
 }
 
 function nextStep(){

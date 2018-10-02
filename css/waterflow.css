@@ -278,8 +278,9 @@ select:-webkit-autofill:focus {
 }
 .water-bottles{
 	display: flex;
-	margin-bottom: 3vh;
+	margin: 3vh 0;
 	justify-content: space-between;
+	width: 75%;
 }
 .app-msg{
 	margin-top: 3vh;
@@ -293,6 +294,12 @@ select:-webkit-autofill:focus {
 }
 .water-bottles img{
 	width: 60px;
+}
+.app-data h2{
+	font-size: 28px;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 7vh;
 }
 .add-bottle-buttons{
 	margin-top: 1vh;
@@ -413,6 +420,9 @@ select:-webkit-autofill:focus {
 	.app-msg{
 		text-align: center;
 	}
+	.app-data{
+		align-items: center;
+	}
 }
 @media (max-width: 750px){
 	.right{
@@ -447,5 +457,10 @@ select:-webkit-autofill:focus {
 	.circle{
 		width: 250px;
 		height: 250px;
+	}
+}
+@media (max-width: 600px){
+	.water-bottles{
+		width: 100%;
 	}
 }
