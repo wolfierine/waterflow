@@ -426,7 +426,6 @@ select:-webkit-autofill:focus {
 	}
 	.water-bottles{
 		justify-content: space-around;
-		width: 100%;
 	}
 	.app-msg{
 		text-align: center;
@@ -477,5 +476,10 @@ select:-webkit-autofill:focus {
 	.circle{
 		width: 250px;
 		height: 250px;
+	}
+}
+@media (max-width: 750px){
+	.water-bottle{
+		width: 100%;
 	}
 }
