@@ -271,9 +271,9 @@ select:-webkit-autofill:focus {
 	width: 60%;
 	margin: 0 auto;
 }
-.app{
+/*.app{
 	width: 100%;
-}
+}*/
 .app-data{
 	text-align: left;
 	display: flex;
@@ -426,6 +426,7 @@ select:-webkit-autofill:focus {
 	}
 	.water-bottles{
 		justify-content: space-around;
+		width: 100%;
 	}
 	.app-msg{
 		text-align: center;
