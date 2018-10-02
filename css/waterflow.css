@@ -448,6 +448,7 @@ select:-webkit-autofill:focus {
 		z-index: 1;
 		overflow: hidden;
 		height: auto !important;
+		min-height: 100vh;
 	}
 	.left::before{
 		content: "";
