@@ -5,15 +5,33 @@
 	--main-font: 'Montserrat', sans-serif;
 }
 
-@keyframes scale{
+@-webkit-keyframes scale{
 	0%{
-		transform: scale(1);
+		-webkit-transform: scale(1);
+		        transform: scale(1);
 	}
 	50%{
-		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		        transform: scale(1.2);
 	}
 	100%{
-		transform: scale(1.4);
+		-webkit-transform: scale(1.4);
+		        transform: scale(1.4);
+	}
+}
+
+@keyframes scale{
+	0%{
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+	50%{
+		-webkit-transform: scale(1.2);
+		        transform: scale(1.2);
+	}
+	100%{
+		-webkit-transform: scale(1.4);
+		        transform: scale(1.4);
 	}
 }
 
@@ -127,7 +145,8 @@ body::-webkit-scrollbar-thumb {
 }
 .logo img{
 	width: 60px;
-	transform: translateY(10px);
+	-webkit-transform: translateY(10px);
+	        transform: translateY(10px);
 }
 #signInForm{
 	overflow: hidden;
@@ -178,22 +197,28 @@ body::-webkit-scrollbar-thumb {
 }
 .inputs-group{
 	display: flex;
+	transition: -webkit-transform .3s .5s;
 	transition: transform .3s .5s;
+	transition: transform .3s .5s, -webkit-transform .3s .5s;
 	position: relative;
 }
 .inputs-group.next-step{
-	transform: translateX(-105%);
+	-webkit-transform: translateX(-105%);
+	        transform: translateX(-105%);
 }
 .inputs-group.next-step .user-name{
 	opacity: 0;
-	transform: translateY(100%);
+	-webkit-transform: translateY(100%);
+	        transform: translateY(100%);
 }
 .inputs-group > div{
 	flex: 1;
 	text-align: right;
 }
 .user-name{
+	transition: opacity .3s .1s, -webkit-transform .6s;
 	transition: transform .6s, opacity .3s .1s;
+	transition: transform .6s, opacity .3s .1s, -webkit-transform .6s;
 }
 .user-weight{
 	position: absolute;
@@ -238,10 +263,14 @@ body::-webkit-scrollbar-thumb {
 	background-repeat: no-repeat;
 	background-position: center top;
 	//filter: contrast(1.2) saturate(1.4);
-	transform: scale(1);
-	filter: contrast(1.1);
+	-webkit-transform: scale(1);
+	        transform: scale(1);
+	-webkit-filter: contrast(1.1);
+	        filter: contrast(1.1);
 	//animation: scale 5s linear alternate infinite;
+	transition: -webkit-transform 5s;
 	transition: transform 5s;
+	transition: transform 5s, -webkit-transform 5s;
 }
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
@@ -346,7 +375,8 @@ select:-webkit-autofill:focus {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	z-index: 99;
 	color: #181818;
 	font-family: sans-serif;
@@ -370,26 +400,41 @@ select:-webkit-autofill:focus {
 	height: 200%;
 	top: 0;
 	left: 50%;
-	transform: translate(-50%, -75%) rotate(0deg);
+	-webkit-transform: translate(-50%, -75%) rotate(0deg);
+	        transform: translate(-50%, -75%) rotate(0deg);
 	background-color: #000;
 	transition: top 4s linear;
 }
 .wave1{
 	border-radius: 45%;
 	background: rgba(255,255,255,1);
-	animation: animate 5s linear infinite;
+	-webkit-animation: animate 5s linear infinite;
+	        animation: animate 5s linear infinite;
 }
 .wave2{
 	border-radius: 40%;
 	background: rgba(255,255,255,.5);
-	animation: animate 10s linear infinite;
+	-webkit-animation: animate 10s linear infinite;
+	        animation: animate 10s linear infinite;
+}
+@-webkit-keyframes animate{
+	0%{
+		-webkit-transform: translate(-50%, -75%) rotate(0deg);
+		        transform: translate(-50%, -75%) rotate(0deg);
+	}
+	100%{
+		-webkit-transform: translate(-50%, -75%) rotate(360deg);
+		        transform: translate(-50%, -75%) rotate(360deg);
+	}
 }
 @keyframes animate{
 	0%{
-		transform: translate(-50%, -75%) rotate(0deg);
+		-webkit-transform: translate(-50%, -75%) rotate(0deg);
+		        transform: translate(-50%, -75%) rotate(0deg);
 	}
 	100%{
-		transform: translate(-50%, -75%) rotate(360deg);
+		-webkit-transform: translate(-50%, -75%) rotate(360deg);
+		        transform: translate(-50%, -75%) rotate(360deg);
 	}
 }
 
